@@ -1,18 +1,24 @@
 package HelloWorld;
 
+import java.util.Scanner;
+
 public class Byte {
-
-	public static void main(String[] args) {
-		final int MAN_NUM = 100;
-		final float PI = 3.14f;
-		
-		long lNum = 10;
-		float fNum = lNum;
-		
-		System.out.println(fNum);
-	
-		
-		}
-		
+		public static void main(String args[]) {
+			Scanner scanner = new Scanner(System.in);
+			
+			int intArray[];
+			intArray = new int[5];
+			int max = 0;
+			System.out.println("양수 5개를 입력하세요.");
+			for(int i=0; i<5; i++) {
+				intArray[i] = scanner.nextInt();
+				if(intArray[i]>max) {
+					max = intArray[i];
+				}
+			}
+			System.out.println(max);
+			scanner.close();
 	}
-
+		
+}
+	
