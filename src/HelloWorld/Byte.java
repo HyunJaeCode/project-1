@@ -4,21 +4,19 @@ import java.util.Scanner;
 
 public class Byte {
 		public static void main(String args[]) {
-			Scanner scanner = new Scanner(System.in);
-			
-			int intArray[];
-			intArray = new int[5];
-			int max = 0;
-			System.out.println("양수 5개를 입력하세요.");
-			for(int i=0; i<5; i++) {
-				intArray[i] = scanner.nextInt();
-				if(intArray[i]>max) {
-					max = intArray[i];
+			double score[][] = {{3.3, 3.4},
+								{3.5, 3.6},
+								{3.7, 4.0},
+								{4.1, 4.2}};
+			double sum = 0;
+			for (int year =0 ; year<score.length; year++) {
+				for(int term =0; term<score[year].length; term++) {
+					sum += score[year][term];
 				}
 			}
-			System.out.println(max);
-			scanner.close();
-	}
-		
+			
+		int n = score.length;
+		int m = score[0].length;
+		System.out.println("4년 전체 평점 평균은" + sum/(n*m));
 }
-	
+}
